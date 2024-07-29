@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import HomePage from './HomePage';
-import BookingPage from './BookingPage';
-import AdminPage from './AdminPage';
-import './App.css'; // Import the CSS file
+import HomePage from './HomePage.jsx';
+import BookingPage from './BookingPage.jsx';
+import AdminPage from './AdminPage.jsx';
+import './App.css';
 
 const App = () => {
   return (

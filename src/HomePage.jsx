@@ -4,13 +4,13 @@ const HomePage = () => {
   const [buses, setBuses] = useState([]);
 
   useEffect(() => {
-    // Example data fetching, replace with actual API call
     const fetchBuses = async () => {
       const data = [
         { id: 1, name: 'Bus 1', time: '10:00 AM', price: '$10' },
         { id: 2, name: 'Bus 2', time: '12:00 PM', price: '$12' },
         { id: 3, name: 'Bus 3', time: '01:30 AM', price: '$30' },
-        { id: 4, name: 'Bus 4', time: '02:00 PM', price: '$50' }
+        { id: 4, name: 'Bus 4', time: '02:00 PM', price: '$50' },
+        { id: 5, name: 'Bus 5', time: '04:00 PM', price: '$70' }
       ];  
     
       setBuses(data);
