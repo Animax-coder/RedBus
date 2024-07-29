@@ -82,58 +82,57 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Available Buses Table */
-.buses-table {
+/* Form Container */
+form {
+  background-color: #333; /* Dark background for form */
+  color: #f0f2f5; /* Light text color for contrast */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Inputs */
+input[type="text"], input[type="email"], select {
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-.buses-table th, .buses-table td {
   padding: 12px;
-  text-align: center;
-  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #444; /* Darker input background */
+  color: #f0f2f5; /* Light text color */
 }
 
-.buses-table th {
-  background-color: #007bff; /* Header color */
-  color: #ffffff;
-  font-weight: bold;
+input[type="text"]:focus, input[type="email"]:focus, select:focus {
+  border-color: #007bff; /* Match focus color with theme */
+  outline: none;
 }
 
-.buses-table td {
-  background-color: #f9f9f9; /* Alternating row colors */
+/* List Items */
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-.buses-table tr:nth-child(even) td {
-  background-color: #e0e0e0; /* Light gray for even rows */
+li {
+  background: #ffffff; /* White background for list items */
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.buses-table tr:hover {
-  background-color: #f1f1f1; /* Hover effect */
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
 
-.bus-id {
-  background-color: #f4a261; /* Light orange */
-  color: #ffffff;
-}
+  nav a {
+    padding: 15px;
+    font-size: 18px;
+  }
 
-.bus-name {
-  background-color: #2a9d8f; /* Teal */
-  color: #ffffff;
-}
-
-.bus-time {
-  background-color: #e76f51; /* Coral */
-  color: #ffffff;
-}
-
-.bus-price {
-  background-color: #264653; /* Dark blue */
-  color: #ffffff;
-}
-
-.bus-destination {
-  background-color: #e9c46a; /* Light yellow */
-  color: #333333;
+  .container {
+    padding: 15px;
+  }
 }
