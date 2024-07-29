@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 
 const BookingPage = () => {
-  const [selectedBus, setSelectedBus] = useState(null);
+  const [selectedBus, setSelectedBus] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
   const handleBooking = () => {
-    // Handle booking logic
     alert(`Booking confirmed for ${name} (${email}) on bus ${selectedBus}`);
   };
 
@@ -15,9 +14,10 @@ const BookingPage = () => {
       <h1>Book Your Seat</h1>
       <select onChange={(e) => setSelectedBus(e.target.value)}>
         <option value="">Select Bus</option>
-        {/* Replace with dynamic options */}
         <option value="1">Bus 1</option>
         <option value="2">Bus 2</option>
+        <option value="1">Bus 3</option>
+        <option value="2">Bus 4</option>
       </select>
       <input
         type="text"

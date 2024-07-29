@@ -5,10 +5,11 @@ const AdminPage = () => {
   const [newBus, setNewBus] = useState({ name: '', time: '', price: '' });
 
   useEffect(() => {
-    // Fetch existing buses from an API or database
     const fetchBuses = async () => {
-      const response = await fetch('/api/admin/buses'); // replace with actual API endpoint
-      const data = await response.json();
+      const data = [
+        { id: 1, name: 'Bus 1', time: '10:00 AM', price: '$10' },
+        { id: 2, name: 'Bus 2', time: '12:00 PM', price: '$12' }
+      ];
       setBuses(data);
     };
 
@@ -16,8 +17,7 @@ const AdminPage = () => {
   }, []);
 
   const handleAddBus = () => {
-    // Add new bus logic
-    setBuses([...buses, newBus]);
+    setBuses([...buses, { ...newBus, id: buses.length + 1 }]);
     setNewBus({ name: '', time: '', price: '' });
   };
 

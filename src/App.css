@@ -1,42 +1,139 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5; /* Soft light gray background */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('your-bus-background.jpg') no-repeat center center fixed; /* Background image */
+  background-size: cover;
+}
+
+/* Main Container */
+.container {
+  max-width: 900px;
+  width: 100%;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for the container */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007bff; /* Bright blue color */
+  padding: 15px 0;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: #0056b3; /* Darker blue for hover effect */
+  color: #e0e0e0;
+}
+
+nav .icon {
+  margin-right: 10px;
+}
+
+/* Page Heading */
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #007bff; /* Match with navigation bar color */
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Buttons */
+button {
+  background-color: #007bff; /* Match navigation color */
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin: 15px 0;
+  display: block;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+button:hover {
+  background-color: #0056b3; /* Darker blue for hover effect */
+  transform: scale(1.05);
 }
 
-.card {
-  padding: 2em;
+/* Available Buses Table */
+.buses-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
-.read-the-docs {
-  color: #888;
+.buses-table th, .buses-table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.buses-table th {
+  background-color: #007bff; /* Header color */
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.buses-table td {
+  background-color: #f9f9f9; /* Alternating row colors */
+}
+
+.buses-table tr:nth-child(even) td {
+  background-color: #e0e0e0; /* Light gray for even rows */
+}
+
+.buses-table tr:hover {
+  background-color: #f1f1f1; /* Hover effect */
+}
+
+.bus-id {
+  background-color: #f4a261; /* Light orange */
+  color: #ffffff;
+}
+
+.bus-name {
+  background-color: #2a9d8f; /* Teal */
+  color: #ffffff;
+}
+
+.bus-time {
+  background-color: #e76f51; /* Coral */
+  color: #ffffff;
+}
+
+.bus-price {
+  background-color: #264653; /* Dark blue */
+  color: #ffffff;
+}
+
+.bus-destination {
+  background-color: #e9c46a; /* Light yellow */
+  color: #333333;
 }
